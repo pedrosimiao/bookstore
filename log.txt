@@ -1,0 +1,40 @@
+#1 declarar (importar) os models no admin.py de cada aplicativo
+
+#2 declarar (importar) os models dentro do  __init__.py da pasta models de cada aplicativo 
+
+#3 declarar os apps (product e order) dentro do bookstore project 
+(bookstore/settings.py em INSTALLER_APPS = [..."product", "order"])
+
+#4 deletar o models.py de cada app substituindo por um diretório models
+
+#5 gerar migrações
+>> poetry run python manage.py makemigrations
+Migrations for 'product':
+  product\migrations\0001_initial.py
+    + Create model Category
+    + Create model Product
+Migrations for 'order':
+  order\migrations\0001_initial.py
+    + Create model Order
+
+
+#6 migrar
+>> poetry run python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, order, product, sessions
+Running migrations:
+  Applying product.0001_initial... OK
+  Applying order.0001_initial... OK
+
+#7 >> poetry add django-rest-framework
+
+#8 criar serializers e importá-los no __init__.py da pasta serializers de cada aplicativo (product/serializers, order/serializers)
+
+#9 criar factory.py para cada um dos aplicativos (product e order)
+
+#10 criar os testes para os serializers nas pastas tests de cada aplicativo 
+(order/tests/order_test.py, product/tests/product_test.py, product/tests/category_test.py)
+
+#11 criar o arquivo pytest.ini na raiz do projeto
+[pytest]
+DJANGO_SETTINGS_MODULE = bookstore.settings

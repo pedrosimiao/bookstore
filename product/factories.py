@@ -40,8 +40,8 @@ class ProductFactory(factory.django.DjangoModelFactory):
         
         if extracted:  
             # Se extracted contiver categorias passadas explicitamente, adiciona-as ao produto.
-            for category in extracted:
-                self.category.add(category)
+            for categories in extracted:
+                self.category.add(categories)
 
     class Meta:  
         model = Product  

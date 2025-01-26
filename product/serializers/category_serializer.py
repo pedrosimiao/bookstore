@@ -12,6 +12,7 @@ class CategorySerializer(serializers.ModelSerializer):
             'description',  # Inclui o campo `description` no serializador.
             'active',  # Inclui o campo `active` no serializador.
         ]
+        extra_kwargs = {'slug': {'required': False}}
 
 # Este serializador transforma instâncias do modelo Category 
 # (ou consultas do banco de dados) em representações JSON para APIs e vice-versa.

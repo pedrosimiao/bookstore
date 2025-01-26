@@ -22,19 +22,47 @@ C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configu
 |  |  ├── 0001_initial.py
 |  |  ├── __init__.py
 |  |  └── __pycache__
+|  |     ├── 0001_initial.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── models
 |  |  ├── order.py
 |  |  ├── __init__.py
 |  |  └── __pycache__
+|  |     ├── order.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── serializers
 |  |  ├── order_serializer.py
-|  |  └── __init__.py
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── order_serializer.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── tests
+|  |  ├── test_serializers
+|  |  |  ├── test_order_serializer.py
+|  |  |  ├── __init__.py
+|  |  |  └── __pycache__
+|  |  ├── test_viewsets
+|  |  |  ├── test_order_viewset.py
+|  |  |  ├── __init__.py
+|  |  |  └── __pycache__
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── order_test.cpython-312-pytest-8.3.4.pyc
+|  |     └── __init__.cpython-312.pyc
+|  ├── urls.py
 |  ├── views.py
+|  ├── viewsets
+|  |  ├── order_viewset.py
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── order_viewset.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── __init__.py
 |  └── __pycache__
 |     ├── admin.cpython-312.pyc
 |     ├── apps.cpython-312.pyc
+|     ├── factories.cpython-312.pyc
+|     ├── urls.cpython-312.pyc
 |     └── __init__.cpython-312.pyc
 ├── poetry.lock
 ├── product
@@ -43,30 +71,68 @@ C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configu
 |  ├── factories.py
 |  ├── migrations
 |  |  ├── 0001_initial.py
+|  |  ├── 0002_rename_tutle_product_title.py
 |  |  ├── __init__.py
 |  |  └── __pycache__
+|  |     ├── 0001_initial.cpython-312.pyc
+|  |     ├── 0002_rename_tutle_product_title.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── models
 |  |  ├── category.py
 |  |  ├── product.py
 |  |  ├── __init__.py
 |  |  └── __pycache__
+|  |     ├── category.cpython-312.pyc
+|  |     ├── product.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── serializers
 |  |  ├── category_serializer.py
 |  |  ├── product_serializer.py
-|  |  └── __init__.py
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── category_serializer.cpython-312.pyc
+|  |     ├── product_serializer.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── tests
+|  |  ├── test_serializers
+|  |  |  ├── test_category_serializer.py
+|  |  |  ├── test_product__serializer.py
+|  |  |  ├── __init__.py
+|  |  |  └── __pycache__
+|  |  ├── test_viewsets
+|  |  |  ├── test_category_viewset.py
+|  |  |  ├── test_product_viewset.py
+|  |  |  ├── __init__.py
+|  |  |  └── __pycache__
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── category_test.cpython-312-pytest-8.3.4.pyc
+|  |     ├── product_test.cpython-312-pytest-8.3.4.pyc
+|  |     └── __init__.cpython-312.pyc
+|  ├── urls.py
 |  ├── views.py
+|  ├── viewsets
+|  |  ├── category_viewset.py
+|  |  ├── product_viewset.py
+|  |  ├── __init__.py
+|  |  └── __pycache__
+|  |     ├── category_viewset.cpython-312.pyc
+|  |     ├── product_viewset.cpython-312.pyc
+|  |     └── __init__.cpython-312.pyc
 |  ├── __init__.py
 |  └── __pycache__
 |     ├── admin.cpython-312.pyc
 |     ├── apps.cpython-312.pyc
+|     ├── factories.cpython-312.pyc
+|     ├── urls.cpython-312.pyc
 |     └── __init__.cpython-312.pyc
 ├── pyproject.toml
+├── pytest.ini
 ├── README.md
 ├── requirements.txt
 └── structure.txt
 
-directory: 18 file: 47
+directory: 34 file: 97
 
 
 

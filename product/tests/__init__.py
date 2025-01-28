@@ -1,0 +1,2 @@
+from .test_serializers import test_product__serializer, test_category_serializer
+from .test_viewsets import test_product_viewset, test_category_viewset

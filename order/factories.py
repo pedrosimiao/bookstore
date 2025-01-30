@@ -29,8 +29,8 @@ class OrderFactory(factory.django.DjangoModelFactory):
         
         if extracted:  
             # Se extracted contiver produtos passados explicitamente, adiciona-os ao pedido.
-            for product in extracted:
-                self.product.add(product)
+            for products in extracted:
+                self.product.add(products)
 
     class Meta:  
         model = Order  

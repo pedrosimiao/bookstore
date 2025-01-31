@@ -1,4 +1,3 @@
-
 C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configurando o Django Rest Framework\bookstore
 ├── bookstore
 |  ├── asgi.py

@@ -23,10 +23,13 @@ class TestCategoryViewSet(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+        # import pdb;
+        # pdb.set_trace()
+
         print(json.loads(response.content))
 
-        category_data = json.loads(response.content)[0]
-        self.assertEqual(category_data['title'], self.category.title)
+        category_data = json.loads(response.content)
+        self.assertEqual( category_data['results'][0]['title'], self.category.title)
 
 
     def test_create_category(self):
@@ -34,17 +37,16 @@ class TestCategoryViewSet(APITestCase):
             'title': 'technology',
         })
 
+
         response = self.client.post(
             reverse('category-list', kwargs={'version': 'v1'}),
             data=data,
             content_type='application/json'
         )
 
-        # import pdb;
-        # pdb.set_trace()
 
-        print('Response data: ', response.data)
-        print('Response content: ', response.content)
+        # print('Response data: ', response.data)
+        # print('Response content: ', response.content)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 

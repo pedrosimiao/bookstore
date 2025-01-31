@@ -15,8 +15,6 @@ class TestProductViewSet(APITestCase):
     client = APIClient()
 
     def setUp(self):
-        self.user = UserFactory()
-
         self.product = ProductFactory(
             title = 'pro controller',
             price=200.00
@@ -32,12 +30,13 @@ class TestProductViewSet(APITestCase):
         print(json.loads(response.content))
 
         product_data = json.loads(response.content)
-        self.assertEqual(product_data[0]['title'], self.product.title)
-        self.assertEqual(product_data[0]['price'], self.product.price)
-        self.assertEqual(product_data[0]['active'], self.product.active)
+        self.assertEqual(product_data['results'][0]['title'], self.product.title)
+        self.assertEqual(product_data['results'][0]['price'], self.product.price)
+        self.assertEqual(product_data['results'][0]['active'], self.product.active)
 
     def test_create_product(self):
         category = CategoryFactory()
+        
         data = json.dumps({
             'title': 'notebook',
             'price': 800.00,
@@ -50,8 +49,8 @@ class TestProductViewSet(APITestCase):
             content_type='application/json'
         )
 
-        print('Response data: ', response.data)
-        print('Response content: ', response.content)
+        # print('Response data: ', response.data)
+        # print('Response content: ', response.content)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 

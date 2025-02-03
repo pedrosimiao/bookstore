@@ -1,3 +1,4 @@
+
 C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configurando o Django Rest Framework\bookstore
 ├── bookstore
 |  ├── asgi.py
@@ -11,7 +12,11 @@ C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configu
 |     ├── wsgi.cpython-312.pyc
 |     └── __init__.cpython-312.pyc
 ├── db.sqlite3
+├── docker-compose.yml
+├── Dockerfile
+├── env.dev
 ├── log.txt
+├── Makefile
 ├── manage.py
 ├── order
 |  ├── admin.py
@@ -131,7 +136,7 @@ C:\Users\simia\Desktop\EBAC\Full Stack Python\Backend Python\Modulo 13 - Configu
 ├── requirements.txt
 └── structure.txt
 
-directory: 34 file: 97
+directory: 34 file: 101
 
 
 

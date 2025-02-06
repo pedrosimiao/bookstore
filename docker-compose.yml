@@ -13,9 +13,10 @@ services:
       - 8000:8000  # Mapeia a porta 8000 do container para a porta 8000 da máquina local
     env_file:
       - ./env.dev  # Carrega variáveis de ambiente do arquivo env.dev
+    networks:
+      - backend # Conecta o serviço à rede 'backend' para comunicação com outros containers
     depends_on:
       - db  # Define que o serviço "web" só iniciará depois que o banco de dados estiver pronto
-
   # Serviço do banco de dados PostgreSQL
   db:
     image: postgres:13.0-alpine  # Usa a imagem do PostgreSQL versão 13 com Alpine (mais leve e otimizada)
@@ -25,9 +26,15 @@ services:
       - POSTGRES_USER=dev  # Usuário do banco de dados
       - POSTGRES_PASSWORD=dev  # Senha do banco de dados
       - POSTGRES_DB=bookstore_db  # Nome do banco de dados
+    networks:
+      - backend # Conecta o serviço à rede 'backend' para comunicação com outros containers
     ports:
       - "5432:5432"
-      
+# Define as redes utilizadas pelos serviços
+networks:
+  backend:
+    driver: bridge
+
 # Declara volumes que serão usados para persistência de dados
 volumes:
-  postgres_data:  # Volume nomeado para armazenar os dados do PostgreSQL
+  postgres_data:  # Volume nomeado para armazenar os dados do PostgreSQL e garantir persistência

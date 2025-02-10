@@ -162,5 +162,5 @@ cython_debug/
 #.idea/
 
 log.txt
-
 docker-ci-instructions.md
+heroku.txt

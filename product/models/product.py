@@ -22,3 +22,6 @@ class Product(models.Model):
     )  # Relacionamento "muitos para muitos" com categorias, opcional.
 
     # Nota: O relacionamento ManyToManyField significa que um produto pode pertencer a várias categorias e vice-versa.
+
+    def __str__(self):
+        return self.title

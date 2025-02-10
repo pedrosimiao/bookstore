@@ -29,7 +29,7 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 
 # Se o Heroku fosse gratuito...
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'p-simiao-ebac-bookstore-api.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'p-simiao-ebac-bookstore-api.herokuapp.com', ' pedrosimiao.pythonanywhere.com']
 
 
 # Application definition
@@ -165,6 +165,6 @@ INTERNAL_IPS = [
 #Simplified static file serving.
 #https://warehouse.python.org/project/whitenoise/
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'

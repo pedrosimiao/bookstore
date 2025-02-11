@@ -29,7 +29,7 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 
 # Se o Heroku fosse gratuito...
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'p-simiao-ebac-bookstore-api.herokuapp.com', ' pedrosimiao.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'p-simiao-ebac-bookstore-api.herokuapp.com', 'pedrosimiao.pythonanywhere.com']
 
 
 # Application definition
